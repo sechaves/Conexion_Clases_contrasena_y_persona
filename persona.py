@@ -1,3 +1,8 @@
+#Autores: Sergio Gabriel Chaves Mosquera, Maria Jose Sanchez Portillo, Samuel Esteban Reyes Uribe
+#Asignacion: Tarea sesión virtual 16/09
+#Objetivo del Programa: Registrar personas como objetos, calcular su IMC, verificar la mayoría de edad y asignarles automáticamente una contraseña aleatoria y verificar si esta es segura.
+
+
 from Contraseña import Contraseña 
 
 class Persona:
@@ -133,6 +138,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
