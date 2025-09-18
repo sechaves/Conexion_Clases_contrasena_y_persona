@@ -49,16 +49,19 @@ def menu_principal():
         print("6. Salir del programa")
         
         opcion_elegida = int(input("Por favor ingrese la Opción que desee: "))
-        
+
+        #verificar si la opcion es valida
         while opcion_elegida < 1 or opcion_elegida > 6:
             print("Opción inválida. Por favor intente nuevamente: ")
             opcion_elegida = int(input())
-        
+            
+        #ejecucion de la funcion para crear persona
         if opcion_elegida == 1:
             persona = crear_persona()
             personas.append(persona)
             print(f"Persona {persona.nombre} registrada con éxito. Su contraseña asignada es: {persona.contraseña.contraseña}")
-        
+
+        #ejecucion de la funcion para calcular IMC de la persona
         elif opcion_elegida == 2:
             if not personas:
                 print("\nNo hay ninguna persona registrada.")
@@ -71,7 +74,8 @@ def menu_principal():
                     print("Opción inválida.") 
                 else:
                     personas[eleccion-1].calcular_imc()
-        
+                    
+        #ejecucion de la funcion para verificar mayoria de dad
         elif opcion_elegida == 3:
             if not personas:
                 print("\nNo hay ninguna persona registrada.")
@@ -84,7 +88,8 @@ def menu_principal():
                     print("Opción inválida.")
                 else:
                     personas[eleccion-1].verificar_mayoria_edad()
-        
+
+        #ejecucion de la funcion para mostrar contraseña
         elif opcion_elegida == 4:
             if not personas:
                 print("\nNo hay ninguna persona registrada.")
@@ -97,7 +102,8 @@ def menu_principal():
                     print("Opción inválida.")
                 else:
                     personas[eleccion-1].mostrar_contraseña()
-        
+
+        #ejecucion de la funcion para verificar contraseña
         elif opcion_elegida == 5:
             if not personas:
                 print("\nNo hay ninguna persona registrada.")
@@ -115,7 +121,7 @@ def menu_principal():
                     else:
                         print(f"La contraseña de {persona.nombre} NO es segura")
 
-        
+        #ejecucion de la funcion para salir del programa
         elif opcion_elegida == 6:
             print("Saliendo del programa...")
             break
@@ -127,3 +133,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
